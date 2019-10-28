@@ -7,6 +7,7 @@ git add .       //adiciona todos os arquivos a staging area
 git commit      // adiciona o arquivo ao repositorio
 git commit -m  // permite adiciona uma mensagem ao commit
 git diff        // ele permite ver as alterações que foram feitas. 
+git diff --stages // diferenças entre a staged e o repository
 
 
 
