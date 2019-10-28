@@ -35,7 +35,7 @@ git log -p -3                 //ele mostra a alteração toda
 
 
 git branch {nome}
-
+git checkout {nome}
 
 -f // força uma ação
 -r // diretorio
