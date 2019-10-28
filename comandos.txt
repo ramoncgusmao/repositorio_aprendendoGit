@@ -17,8 +17,14 @@ git rm {file} //remove o arquivo para o repository
 git add --all  //adiciona todos os arquivos até os removidos.
 git add -A     //adiciona todos os arquivos até os removidos.
 
+rm -r {directory} // para remover um diretorio
+git rm -r {directory} // para remover um diretorio ja do staging area
+add -f {file}  // para forçar adicionar um arquivo 
+git rm -rf {directory} --cached // remove os arquivos da staging area sem remover o arquivo localmente
 
-
+-f // força uma ação
+-r // diretorio
+-A // tudo
 
 
 
