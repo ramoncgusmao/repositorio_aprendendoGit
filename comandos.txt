@@ -28,6 +28,10 @@ git commit -am "message" // ele commit direto sem precisar adicionar na staging 
 
 git config --global core.excludesfile // para indicar um .gitignore global da sua maquina. 
 git config --global core.editor         // para por o editor
+git log --pretty=oneline  //ele tras o log em uma linha
+git log --abrev-commit      //ele reduz o nome do commit pra trazer só os primeiros 7 caracteres
+git log --stat              //ele da mais dados sobre o commit
+git log -p -3                 //ele mostra a alteração toda
 -f // força uma ação
 -r // diretorio
 -A // tudo
