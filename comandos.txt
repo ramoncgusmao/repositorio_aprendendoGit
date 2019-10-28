@@ -45,6 +45,8 @@ git branch -D {nome}    // remove a branch, pode remover varias branch
 git checkout --orphan {nome}  // cria uma branch vazia limpa
 
 
+git init --bare
+
 -f // força uma ação
 -r // diretorio
 -A // tudo
