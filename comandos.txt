@@ -32,6 +32,11 @@ git log --pretty=oneline  //ele tras o log em uma linha
 git log --abrev-commit      //ele reduz o nome do commit pra trazer só os primeiros 7 caracteres
 git log --stat              //ele da mais dados sobre o commit
 git log -p -3                 //ele mostra a alteração toda
+
+
+git branch {nome}
+
+
 -f // força uma ação
 -r // diretorio
 -A // tudo
@@ -39,3 +44,4 @@ git log -p -3                 //ele mostra a alteração toda
 
 
 touch  // cria arquivos
+mkdir //cria diretorios
