@@ -22,6 +22,8 @@ git rm -r {directory} // para remover um diretorio ja do staging area
 add -f {file}  // para forçar adicionar um arquivo 
 git rm -rf {directory} --cached // remove os arquivos da staging area sem remover o arquivo localmente
 
+git commit -a -m "message" // ele commit direto sem precisar adicionar na staging area
+git commit -am "message" // ele commit direto sem precisar adicionar na staging area
 -f // força uma ação
 -r // diretorio
 -A // tudo
