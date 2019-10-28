@@ -44,8 +44,13 @@ git branch -m {novo nome}  // muda o nome da branch
 git branch -D {nome}    // remove a branch, pode remover varias branch
 git checkout --orphan {nome}  // cria uma branch vazia limpa
 
-
+git remote -v // mostra o caminho do repository
+git remote add {local} {repository} //mostra o repositorio 
 git init --bare
+
+
+git push <origin> <branch>
+
 
 -f // força uma ação
 -r // diretorio
