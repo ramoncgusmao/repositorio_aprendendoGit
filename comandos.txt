@@ -12,6 +12,9 @@ git log --name-status // mostra todos os arquivos modificados no log dos commit
 git diff {commit} // mostra as modificacoes que foram feitas do commit para o atual. (preciso só digitar as primeiras 8 letras)
 git diff {commit} {commit} // mostra as modificacoes que foram feitas entre os commit
 
+rm {file} //remove o arquivo para a staging area
+git rm {file} //remove o arquivo para o repository
+
 
 
 
