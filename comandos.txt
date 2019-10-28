@@ -24,6 +24,10 @@ git rm -rf {directory} --cached // remove os arquivos da staging area sem remove
 
 git commit -a -m "message" // ele commit direto sem precisar adicionar na staging area
 git commit -am "message" // ele commit direto sem precisar adicionar na staging area
+
+
+git config --global core.excludesfile // para indicar um .gitignore global da sua maquina. 
+git config --global core.editor         // para por o editor
 -f // força uma ação
 -r // diretorio
 -A // tudo
