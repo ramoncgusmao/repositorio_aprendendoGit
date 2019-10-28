@@ -1,2 +1,17 @@
 
-git init 
+git init // comando para iniciar o repositorio
+git status // comando para saber como está o estado atual 
+git log // mostra dados do commit atual
+git add  {arquivo} //adiciona a staging area
+git add .       //adiciona todos os arquivos a staging area 
+git commit      // adiciona o arquivo ao repositorio
+git commit -m  // permite adiciona uma mensagem ao commit
+git diff        // ele permite ver as alterações que foram feitas. 
+
+
+
+
+
+
+
+touch  // cria arquivos
