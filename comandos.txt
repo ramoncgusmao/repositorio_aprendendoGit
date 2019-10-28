@@ -49,7 +49,10 @@ git remote add {local} {repository} //mostra o repositorio
 git init --bare
 
 
-git push <origin> <branch>
+git push <origin> <branch>  // sobe uma branch para um repositorio
+git clone {repositorio}  // busca um repositorio ja criado
+git pull <origin> <branch>  // buscar as atualizações do repositorio
+
 
 
 -f // força uma ação
