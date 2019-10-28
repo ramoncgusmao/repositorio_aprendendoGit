@@ -14,7 +14,8 @@ git diff {commit} {commit} // mostra as modificacoes que foram feitas entre os c
 
 rm {file} //remove o arquivo para a staging area
 git rm {file} //remove o arquivo para o repository
-
+git add --all  //adiciona todos os arquivos até os removidos.
+git add -A     //adiciona todos os arquivos até os removidos.
 
 
 
