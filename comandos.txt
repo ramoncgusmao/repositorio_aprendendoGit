@@ -21,6 +21,7 @@ rm -r {directory} // para remover um diretorio
 git rm -r {directory} // para remover um diretorio ja do staging area
 add -f {file}  // para forçar adicionar um arquivo 
 git rm -rf {directory} --cached // remove os arquivos da staging area sem remover o arquivo localmente
+git rm -rf // remove todos os arquivos da staging area
 
 git commit -a -m "message" // ele commit direto sem precisar adicionar na staging area
 git commit -am "message" // ele commit direto sem precisar adicionar na staging area
@@ -34,9 +35,15 @@ git log --stat              //ele da mais dados sobre o commit
 git log -p -3                 //ele mostra a alteração toda
 
 
-git branch {nome}
-git checkout {nome}
-git merge {branch} 
+git branch              // mostra todas as branch
+git branch {nome}       // cria nova branch
+git checkout {nome}     // muda entre as branch
+git merge {branch}      // junta as branch
+git checkout -b {nome}  // cria a branch e muda pra ela
+git branch -m {novo nome}  // muda o nome da branch
+git branch -D {nome}    // remove a branch, pode remover varias branch
+git checkout --orphan {nome}  // cria uma branch vazia limpa
+
 
 -f // força uma ação
 -r // diretorio
