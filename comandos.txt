@@ -25,7 +25,7 @@ git rm -rf // remove todos os arquivos da staging area
 
 git commit -a -m "message" // ele commit direto sem precisar adicionar na staging area
 git commit -am "message" // ele commit direto sem precisar adicionar na staging area
-
+git commit -m  "message" --amend //ele sobrescreverá o ultimo commit
 
 git config --global core.excludesfile // para indicar um .gitignore global da sua maquina. 
 git config --global core.editor         // para por o editor
