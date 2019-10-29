@@ -53,6 +53,7 @@ git push <origin> <branch>  // sobe uma branch para um repositorio
 git clone {repositorio}  // busca um repositorio ja criado
 git pull <origin> <branch>  // buscar as atualizações do repositorio
 
+git merge --abort //desfazer o merge
 
 
 -f // força uma ação
