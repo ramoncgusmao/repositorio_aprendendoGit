@@ -11,6 +11,7 @@ git diff --stages // diferenças entre a staged e o repository
 git log --name-status // mostra todos os arquivos modificados no log dos commit
 git diff {commit} // mostra as modificacoes que foram feitas do commit para o atual. (preciso só digitar as primeiras 8 letras)
 git diff {commit} {commit} // mostra as modificacoes que foram feitas entre os commit
+git diff -w         // removendo espaços
 
 rm {file} //remove o arquivo para a staging area
 git rm {file} //remove o arquivo para o repository
@@ -40,9 +41,15 @@ git branch {nome}       // cria nova branch
 git checkout {nome}     // muda entre as branch
 git merge {branch}      // junta as branch
 git checkout -b {nome}  // cria a branch e muda pra ela
+git checkout {branch} -b {nome} //cria uma branch baseada em outra branch e muda pra ela
+git checkout {commit} -b {nome} //cria uma branch baseada em um commit e muda pra ele
+git checkout {nome commit} //volta para o commit anterior
+
 git branch -m {novo nome}  // muda o nome da branch
 git branch -D {nome}    // remove a branch, pode remover varias branch
 git checkout --orphan {nome}  // cria uma branch vazia limpa
+git checkout {nome}  // nome do arquivo ele volta as alterações
+
 
 git remote -v // mostra o caminho do repository
 git remote add {local} {repository} //mostra o repositorio 
