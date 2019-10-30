@@ -34,7 +34,7 @@ git log --pretty=oneline  //ele tras o log em uma linha
 git log --abrev-commit      //ele reduz o nome do commit pra trazer só os primeiros 7 caracteres
 git log --stat              //ele da mais dados sobre o commit
 git log -p -3                 //ele mostra a alteração toda
-
+git log --pretty=format:"%h - %an, %ar : %s"
 
 git branch              // mostra todas as branch
 git branch {nome}       // cria nova branch
@@ -62,6 +62,11 @@ git pull <origin> <branch>  // buscar as atualizações do repositorio
 
 git merge --abort //desfazer o merge
 
+git stach
+git stash list
+git stash apply
+git stach drop {nome} 
+git stach pop 
 
 -f // força uma ação
 -r // diretorio
@@ -71,3 +76,23 @@ git merge --abort //desfazer o merge
 
 touch  // cria arquivos
 mkdir //cria diretorios
+
+Log personalizado comandos
+%H  //commit hash
+%h  // abbreviated commit hash
+%T  // Tree hash
+%t  // arvore abreviada hash
+%P  // hashes filhas
+%p  // abreviada hashes filhas
+%s  // titulo do commit
+%an // nome do autor
+%ae // autor email
+%ad // autor data
+%ar // autor data, relativo
+%cn // committer nome
+%ce // committer email
+%cd // committer date
+%cr // committer date, relative
+
+
+
