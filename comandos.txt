@@ -11,6 +11,7 @@ git diff --stages // diferenças entre a staged e o repository
 git log --name-status // mostra todos os arquivos modificados no log dos commit
 git diff {commit} // mostra as modificacoes que foram feitas do commit para o atual. (preciso só digitar as primeiras 8 letras)
 git diff {commit} {commit} // mostra as modificacoes que foram feitas entre os commit
+git diff -w         // removendo espaços
 
 rm {file} //remove o arquivo para a staging area
 git rm {file} //remove o arquivo para o repository
@@ -33,16 +34,22 @@ git log --pretty=oneline  //ele tras o log em uma linha
 git log --abrev-commit      //ele reduz o nome do commit pra trazer só os primeiros 7 caracteres
 git log --stat              //ele da mais dados sobre o commit
 git log -p -3                 //ele mostra a alteração toda
-
+git log --pretty=format:"%h - %an, %ar : %s"
 
 git branch              // mostra todas as branch
 git branch {nome}       // cria nova branch
 git checkout {nome}     // muda entre as branch
 git merge {branch}      // junta as branch
 git checkout -b {nome}  // cria a branch e muda pra ela
+git checkout {branch} -b {nome} //cria uma branch baseada em outra branch e muda pra ela
+git checkout {commit} -b {nome} //cria uma branch baseada em um commit e muda pra ele
+git checkout {nome commit} //volta para o commit anterior
+
 git branch -m {novo nome}  // muda o nome da branch
 git branch -D {nome}    // remove a branch, pode remover varias branch
 git checkout --orphan {nome}  // cria uma branch vazia limpa
+git checkout {nome}  // nome do arquivo ele volta as alterações
+
 
 git remote -v // mostra o caminho do repository
 git remote add {local} {repository} //mostra o repositorio 
@@ -57,6 +64,11 @@ git merge --abort //desfazer o merge
 git remote -v
 git remote set-url <origin> {url}
 
+git stach
+git stash list
+git stash apply
+git stach drop {nome} 
+git stach pop 
 
 -f // força uma ação
 -r // diretorio
@@ -66,3 +78,23 @@ git remote set-url <origin> {url}
 
 touch  // cria arquivos
 mkdir //cria diretorios
+
+Log personalizado comandos
+%H  //commit hash
+%h  // abbreviated commit hash
+%T  // Tree hash
+%t  // arvore abreviada hash
+%P  // hashes filhas
+%p  // abreviada hashes filhas
+%s  // titulo do commit
+%an // nome do autor
+%ae // autor email
+%ad // autor data
+%ar // autor data, relativo
+%cn // committer nome
+%ce // committer email
+%cd // committer date
+%cr // committer date, relative
+
+
+
