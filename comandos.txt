@@ -54,6 +54,8 @@ git clone {repositorio}  // busca um repositorio ja criado
 git pull <origin> <branch>  // buscar as atualizações do repositorio
 
 git merge --abort //desfazer o merge
+git remote -v
+git remote set-url <origin> {url}
 
 
 -f // força uma ação
