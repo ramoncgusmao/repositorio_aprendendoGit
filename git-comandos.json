@@ -11,7 +11,12 @@
         },
         "log" : {
             "" : "apresenta dados do commit atual",
-            "--name-status" : "apresenta todos os arquivos modificados no log dos commit"
+            "--name-status" : "apresenta todos os arquivos modificados no log dos commit",
+            "--pretty=oneline" : "o log vem só em uma linha",
+            "--abrev-commit" : "reduz o nome do commit pra trazer só os primeiro catacteres",
+            "--stat" : "ele da mais dados sobre o commit",
+            "-p -3" : "traz os ultimos 3 commit completo",
+            "--pretty=format" : "mediante uma formatação ele devolve o commit customizado"
         },
         "add" : {
             "<arquivo>" : "adiciona o arquivo a staging area",
@@ -49,7 +54,36 @@
                 "--cached" : "remove todos os arquivos sem remover localmente",
                 "<diretorio>" : "remove todos os arquivos do diretorio"
             }
-        }  
+        },
+        "config" : {
+            "--global" : {
+                "core.excludesfile" : "para indicar um .gitignore global",
+                "core.editor" : "para selecionar um editor padrão",
+               
+            }
+        },
+        "branch" : {
+            "" : "apresenta todas as branch",
+            "<nome>" : "cria nova branch",
+            "-m <nome>" : "muda o nome da branch",
+            "-D <nome>" : "remove a branch pode ser removidas varias de uma vez",
+            "--orphan <nome>" : "cria uma branch vazia limpa",
+            " <arquivo>" : "ele volta as alterações para esse arquivo"
+            
+    
+        }, 
+        "checkout" : {
+            "<nome>" : "muda para a branch",
+            "-b <nome> ": "cria uma branch e muda pra ela",
+            "<branch> -b <nome>" : "cria uma branch a partir de outra branch e muda pra ela",
+            "<commit> -b <nome>" : "cria uma branch a partir de um commit e muda pra ela",
+            "<commit>" : "volta para o commit, sem criar branch"
+    
+        }, 
+        "merge" : {
+            "<branch>" : "junta as branch"           
+    
+        }
 
     },
     "rm" : {
