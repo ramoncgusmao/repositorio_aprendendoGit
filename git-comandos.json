@@ -1,0 +1,59 @@
+ {
+    "git" : {
+
+        "init" : {
+            "" : "inicia o repositorio",
+            "--bare" : "cria Repositorios para o servidor"
+        },
+        "status" : {
+            "" : "mostra a situação atual"
+
+        },
+        "log" : {
+            "" : "apresenta dados do commit atual",
+            "--name-status" : "apresenta todos os arquivos modificados no log dos commit"
+        },
+        "add" : {
+            "<arquivo>" : "adiciona o arquivo a staging area",
+            " . " : "adiciona todos os arquivos modificados a staging area",
+            "--all" : "adiciona todos os arquivos até os removidos.",
+            "-A" : "adiciona todos os arquivos até os removidos.",
+            "-f" : {
+                "" : "força para adicionar arquivos",
+                "<file>" : "para forçar um arquivo"
+            }
+
+        },
+        "commit" : {
+            "" : "adiciona o arquivo ao repositorio mas abre um editor para adicionar uma mensagem",
+            "-m <mensagem>" : "permite adicionar uma mensagem ao commit",
+            "-am  <mensagem>" : "commit direto sem precisar adicionar na staging area",
+            "-a -m  <mensagem>" : "commit direto sem precisar adicionar na staging area",
+            "--amend" : "sobrescreve o ultimo commit"
+    
+        },    
+        "diff" : {
+            "" : "apresenta as alterações realizadas",
+            "--staged" : "diferenças entre a staged e o repository",
+            "<commit>" : {
+                "" : "apresenta as modificações feitas do commit para o atual",
+                "<commit>" : "mostra as modificacoes que foram feitas entre os commit"
+            },
+            "-w" : "remove os espaços"
+        },  
+        "rm" : {
+            "<arquivo>" : "remove o arquivo do repository",
+            "-r" : "remove um diretorio",
+            "-rf" : {
+                "" : "remove todos os arquivos da staging area",
+                "--cached" : "remove todos os arquivos sem remover localmente",
+                "<diretorio>" : "remove todos os arquivos do diretorio"
+            }
+        }  
+
+    },
+    "rm" : {
+        "<arquivo>" : "remove o arquivo da staging area",
+        "-r" : "remove um diretorio"
+    } 
+}

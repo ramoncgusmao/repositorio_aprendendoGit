@@ -59,16 +59,18 @@ git init --bare
 git push <origin> <branch>  // sobe uma branch para um repositorio
 git clone {repositorio}  // busca um repositorio ja criado
 git pull <origin> <branch>  // buscar as atualizações do repositorio
+git push origin <branch> -- delete // deleta a branch
+git push origin :<branch>  // deleta a branch
 
 git merge --abort //desfazer o merge
 git remote -v
 git remote set-url <origin> {url}
 
-git stach
-git stash list
-git stash apply
-git stach drop {nome} 
-git stach pop 
+git stach  //cria uma stach
+git stash list // lista as stach
+git stash apply // puxa uma stash
+git stach drop {nome}  // deleta uma stash
+git stach pop  // busca a stach
 
 -f // força uma ação
 -r // diretorio
