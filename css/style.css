@@ -7,3 +7,6 @@ body {
     color: #fc0;
 }
 
+.main {
+    display: flex;
+}
