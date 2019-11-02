@@ -1,11 +1,12 @@
 
-git init // comando para iniciar o repositorio
-git status // comando para saber como está o estado atual 
+git init // comando para iniciar o repositorio *
+git status // comando para saber como está o estado atual * 
 git log // mostra dados do commit atual
 git add  {arquivo} //adiciona a staging area
 git add .       //adiciona todos os arquivos a staging area 
 git commit      // adiciona o arquivo ao repositorio
 git commit -m  // permite adiciona uma mensagem ao commit
+
 git diff        // ele permite ver as alterações que foram feitas. 
 git diff --stages // diferenças entre a staged e o repository
 git log --name-status // mostra todos os arquivos modificados no log dos commit
@@ -21,12 +22,15 @@ git add -A     //adiciona todos os arquivos até os removidos.
 rm -r {directory} // para remover um diretorio
 git rm -r {directory} // para remover um diretorio ja do staging area
 add -f {file}  // para forçar adicionar um arquivo 
+
 git rm -rf {directory} --cached // remove os arquivos da staging area sem remover o arquivo localmente
 git rm -rf // remove todos os arquivos da staging area
 
 git commit -a -m "message" // ele commit direto sem precisar adicionar na staging area
 git commit -am "message" // ele commit direto sem precisar adicionar na staging area
 git commit -m  "message" --amend //ele sobrescreverá o ultimo commit
+
+
 
 git config --global core.excludesfile // para indicar um .gitignore global da sua maquina. 
 git config --global core.editor         // para por o editor
@@ -55,6 +59,7 @@ git remote -v // mostra o caminho do repository
 git remote add {local} {repository} //mostra o repositorio 
 git init --bare
 
+-------------------------------------------
 
 git push <origin> <branch>  // sobe uma branch para um repositorio
 git clone {repositorio}  // busca um repositorio ja criado

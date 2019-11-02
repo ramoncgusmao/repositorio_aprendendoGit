@@ -15,7 +15,7 @@
             "--pretty=oneline" : "o log vem só em uma linha",
             "--abrev-commit" : "reduz o nome do commit pra trazer só os primeiro catacteres",
             "--stat" : "ele da mais dados sobre o commit",
-            "-p -3" : "traz os ultimos 3 commit completo",
+            "-p -<numero>" : "traz a quantidade de commits especificados completo.",
             "--pretty=format" : "mediante uma formatação ele devolve o commit customizado"
         },
         "add" : {
@@ -59,8 +59,14 @@
             "--global" : {
                 "core.excludesfile" : "para indicar um .gitignore global",
                 "core.editor" : "para selecionar um editor padrão",
-               
-            }
+                "credential.helper " : {
+                    "cache" : "salva a senha no computador.",
+                    "'cache --timeout=<tempo>'": "salva a senha no computador por um tempo determinado"
+                }
+            },
+            "--list" : "apresenta a lista com as configurações do git",
+            "--unset" : "remove alguma credencial"
+
         },
         "branch" : {
             "" : "apresenta todas as branch",
@@ -81,8 +87,24 @@
     
         }, 
         "merge" : {
-            "<branch>" : "junta as branch"           
+            "<branch>" : "junta as branch",
+            "--abort" : "desfazer o merge"           
     
+        },
+        "remote" : {
+            "-v" : "mostra o caminho do repository",
+            "add <local> <repository>" : "vincula os arquivos locais a um repositorio" ,
+            "set-url <origin> <repositorio>" : "modifica o repositorio vinculado atual pelo novo"
+        },
+        "push <origin>" : {
+            "<branch>" : {
+                "" : "sobe os commit de uma branch para o repositorio",
+                "--delete" : "deleta a branch no repositorio"
+            },
+            ":<branch>" : "deleta a branch no repositorio"
+        },
+        "clone" : {
+            "<repositorio>" : "busca um repositorio e baixa seus arquivos para sua maquina"
         }
 
     },
