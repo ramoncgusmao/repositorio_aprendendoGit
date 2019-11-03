@@ -37,7 +37,6 @@
 - **git commit --amend** = sobrescreve o ultimo commit
 
 ## config
-- **git config --global** = 
 - **git config --global core.excludesfile** = para indicar um .gitignore global
 - **git config --global core.editor** = para selecionar um editor padrão
 - **git config --global credential.helper cache** = salva a senha no computador.
@@ -50,7 +49,7 @@
 - **git config --unset** = remove alguma credencial
 
 ## diff  
--**git diff**= apresenta as alterações realizadas,
+- **git diff**= apresenta as alterações realizadas,
 - **git diff --staged**= diferenças entre a staged e o repository,
 - **git diff <commit>**= apresenta as modificações feitas do commit para o atual
 -**git diff <commit> <commit>**= mostra as modificacoes que foram feitas entre os commit
@@ -75,10 +74,40 @@
 - **git log -p -<numero>** = traz a quantidade de commits especificados completo.  
 - **git log --pretty=format** = mediante uma formatação ele devolve o commit customizado.    
   
+## merge
+- **merge <branch>** junta as branch atual que voce está com a que você solicitou
+- **merge --abort** desfazer o merge
+## push 
+    
+- **push <origin> <branch>** sobe os commit de uma branch para o repositorio,
+- **push <origin> <branch> --delete** deleta a branch no repositorio
+- **push <origin> :<branch>** deleta a branch no repositorio
+
+## remote
+- **remote -v** mostra o caminho do repository
+- **remote add <local> <repository>** vincula os arquivos locais a um repositorio
+- **remote set-url <origin> <repositorio>** modifica o repositorio vinculado atual pelo novo
+
+## rm
+- **git rm <arquivo>** = remove o arquivo do repository
+- **git rm -r** = remove um diretorio
+- **git rm -rf** = remove todos os arquivos da staging area
+- **git rm -rf --cached** = remove todos os arquivos sem remover localmente
+- **git rm -rf <diretorio>** = remove todos os arquivos do diretorio
+
+## stach
+- **git stach** = cria uma stach
+- **git stach list** = lista as stach na fila
+- **git stach apply** = busca a primeira stash da fila
+- **git stach drop <nome>** = deleta uma stash
+- **git stach git stach pop** = busca a primeira stash da fila e retira ela da area de stach
+     
+
 ## status
 
 - **git status** = mostra a situação atual
 
-
-- 
-
+# rm
+**rm <arquivo>** = remove o arquivo da staging area
+**rm -r** = remove um diretorio
+  

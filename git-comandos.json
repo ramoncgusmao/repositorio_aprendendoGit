@@ -16,7 +16,7 @@
             "-m <nome>": "muda o nome da branch",
             "-D <nome>": "remove a branch pode ser removidas varias de uma vez",
             "--orphan <nome>": "cria uma branch vazia limpa",
-            " <arquivo>": "ele volta as alterações para esse arquivo"
+            " <arquivo>": "ele volta as alterações para esse commit"
         },
         "checkout": {
             "<nome>": "muda para a branch",
