@@ -115,4 +115,5 @@
 
     
 
+
 _obs: esses são os comandos que eu mais uso, fique a vontade para colocar comandos nos issues ou fazer um pull request adicionando mais comandos e me marcar na mensagem, assim eu aproveito e treino utilizar o git, obrigado pela atenção_
