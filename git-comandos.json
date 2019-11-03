@@ -1,115 +1,117 @@
- {
-    "git" : {
-
-        "init" : {
-            "" : "inicia o repositorio",
-            "--bare" : "cria Repositorios para o servidor"
-        },
-        "status" : {
-            "" : "mostra a situação atual"
-
-        },
-        "log" : {
-            "" : "apresenta dados do commit atual",
-            "--name-status" : "apresenta todos os arquivos modificados no log dos commit",
-            "--pretty=oneline" : "o log vem só em uma linha",
-            "--abrev-commit" : "reduz o nome do commit pra trazer só os primeiro catacteres",
-            "--stat" : "ele da mais dados sobre o commit",
-            "-p -<numero>" : "traz a quantidade de commits especificados completo.",
-            "--pretty=format" : "mediante uma formatação ele devolve o commit customizado"
-        },
-        "add" : {
-            "<arquivo>" : "adiciona o arquivo a staging area",
-            " . " : "adiciona todos os arquivos modificados a staging area",
-            "--all" : "adiciona todos os arquivos até os removidos.",
-            "-A" : "adiciona todos os arquivos até os removidos.",
-            "-f" : {
-                "" : "força para adicionar arquivos",
-                "<file>" : "para forçar um arquivo"
-            }
-
-        },
-        "commit" : {
-            "" : "adiciona o arquivo ao repositorio mas abre um editor para adicionar uma mensagem",
-            "-m <mensagem>" : "permite adicionar uma mensagem ao commit",
-            "-am  <mensagem>" : "commit direto sem precisar adicionar na staging area",
-            "-a -m  <mensagem>" : "commit direto sem precisar adicionar na staging area",
-            "--amend" : "sobrescreve o ultimo commit"
-    
-        },    
-        "diff" : {
-            "" : "apresenta as alterações realizadas",
-            "--staged" : "diferenças entre a staged e o repository",
-            "<commit>" : {
-                "" : "apresenta as modificações feitas do commit para o atual",
-                "<commit>" : "mostra as modificacoes que foram feitas entre os commit"
-            },
-            "-w" : "remove os espaços"
-        },  
-        "rm" : {
-            "<arquivo>" : "remove o arquivo do repository",
-            "-r" : "remove um diretorio",
-            "-rf" : {
-                "" : "remove todos os arquivos da staging area",
-                "--cached" : "remove todos os arquivos sem remover localmente",
-                "<diretorio>" : "remove todos os arquivos do diretorio"
+{
+    "git": {
+        "add": {
+            "<arquivo>": "adiciona o arquivo a staging area",
+            " . ": "adiciona todos os arquivos modificados a staging area",
+            "--all": "adiciona todos os arquivos até os removidos.",
+            "-A": "adiciona todos os arquivos até os removidos.",
+            "-f": {
+                "": "força para adicionar arquivos",
+                "<file>": "para forçar um arquivo"
             }
         },
-        "config" : {
-            "--global" : {
-                "core.excludesfile" : "para indicar um .gitignore global",
-                "core.editor" : "para selecionar um editor padrão",
-                "credential.helper " : {
-                    "cache" : "salva a senha no computador.",
+        "branch": {
+            "": "apresenta todas as branch",
+            "<nome>": "cria nova branch",
+            "-m <nome>": "muda o nome da branch",
+            "-D <nome>": "remove a branch pode ser removidas varias de uma vez",
+            "--orphan <nome>": "cria uma branch vazia limpa",
+            " <arquivo>": "ele volta as alterações para esse arquivo"
+        },
+        "checkout": {
+            "<nome>": "muda para a branch",
+            "-b <nome> ": "cria uma branch e muda pra ela",
+            "<branch> -b <nome>": "cria uma branch a partir de outra branch e muda pra ela",
+            "<commit> -b <nome>": "cria uma branch a partir de um commit e muda pra ela",
+            "<commit>": "volta para o commit, sem criar branch"
+        },
+        "clone": {
+            "<repositorio>": "busca um repositorio e baixa seus arquivos para sua maquina"
+        },
+        "commit": {
+            "": "adiciona o arquivo ao repositorio mas abre um editor para adicionar uma mensagem",
+            "-m <mensagem>": "permite adicionar uma mensagem ao commit",
+            "-am  <mensagem>": "commit direto sem precisar adicionar na staging area",
+            "-a -m  <mensagem>": "commit direto sem precisar adicionar na staging area",
+            "--amend": "sobrescreve o ultimo commit"
+        },
+        "config": {
+            "--global": {
+                "core.excludesfile": "para indicar um .gitignore global",
+                "core.editor": "para selecionar um editor padrão",
+                "credential.helper ": {
+                    "cache": "salva a senha no computador.",
                     "'cache --timeout=<tempo>'": "salva a senha no computador por um tempo determinado"
                 }
             },
-            "--list" : "apresenta a lista com as configurações do git",
-            "--unset" : "remove alguma credencial"
-
+            "user.email <email>": "configura o email de um projeto",
+            "user.name <nome>": "configura o nome de um usuario de um projeto",
+            "--list": "apresenta a lista com as configurações do git",
+            "--unset": "remove alguma credencial"
         },
-        "branch" : {
-            "" : "apresenta todas as branch",
-            "<nome>" : "cria nova branch",
-            "-m <nome>" : "muda o nome da branch",
-            "-D <nome>" : "remove a branch pode ser removidas varias de uma vez",
-            "--orphan <nome>" : "cria uma branch vazia limpa",
-            " <arquivo>" : "ele volta as alterações para esse arquivo"
-            
-    
-        }, 
-        "checkout" : {
-            "<nome>" : "muda para a branch",
-            "-b <nome> ": "cria uma branch e muda pra ela",
-            "<branch> -b <nome>" : "cria uma branch a partir de outra branch e muda pra ela",
-            "<commit> -b <nome>" : "cria uma branch a partir de um commit e muda pra ela",
-            "<commit>" : "volta para o commit, sem criar branch"
-    
-        }, 
-        "merge" : {
-            "<branch>" : "junta as branch",
-            "--abort" : "desfazer o merge"           
-    
-        },
-        "remote" : {
-            "-v" : "mostra o caminho do repository",
-            "add <local> <repository>" : "vincula os arquivos locais a um repositorio" ,
-            "set-url <origin> <repositorio>" : "modifica o repositorio vinculado atual pelo novo"
-        },
-        "push <origin>" : {
-            "<branch>" : {
-                "" : "sobe os commit de uma branch para o repositorio",
-                "--delete" : "deleta a branch no repositorio"
+        "diff": {
+            "": "apresenta as alterações realizadas",
+            "--staged": "diferenças entre a staged e o repository",
+            "<commit>": {
+                "": "apresenta as modificações feitas do commit para o atual",
+                "<commit>": "mostra as modificacoes que foram feitas entre os commit"
             },
-            ":<branch>" : "deleta a branch no repositorio"
+            "-w": "remove os espaços"
         },
-        "clone" : {
-            "<repositorio>" : "busca um repositorio e baixa seus arquivos para sua maquina"
+        "fetch": {
+            "<repository>": "baixa as modificações de outro repositorio diferente do origin"
+        },
+        "init": {
+            "": "inicia o repositorio",
+            "--bare": "cria Repositorios para o servidor"
+        },
+        "log": {
+            "": "apresenta dados do commit atual",
+            "--name-status": "apresenta todos os arquivos modificados no log dos commit",
+            "--pretty=oneline": "o log vem só em uma linha",
+            "--abrev-commit": "reduz o nome do commit pra trazer só os primeiro catacteres",
+            "--stat": "ele da mais dados sobre o commit",
+            "-p -<numero>": "traz a quantidade de commits especificados completo.",
+            "--pretty=format": "mediante uma formatação ele devolve o commit customizado"
+        },
+        "merge": {
+            "<branch>": "junta as branch",
+            "--abort": "desfazer o merge"
+        },
+        "push <origin>": {
+            "<branch>": {
+                "": "sobe os commit de uma branch para o repositorio",
+                "--delete": "deleta a branch no repositorio"
+            },
+            ":<branch>": "deleta a branch no repositorio"
+        },
+        "remote": {
+            "-v": "mostra o caminho do repository",
+            "add <local> <repository>": "vincula os arquivos locais a um repositorio",
+            "set-url <origin> <repositorio>": "modifica o repositorio vinculado atual pelo novo"
+        },
+        "rm": {
+            "<arquivo>": "remove o arquivo do repository",
+            "-r": "remove um diretorio",
+            "-rf": {
+                "": "remove todos os arquivos da staging area",
+                "--cached": "remove todos os arquivos sem remover localmente",
+                "<diretorio>": "remove todos os arquivos do diretorio"
+            }
+        },
+        "stach": {
+            "": "cria uma stach",
+            "list": "lista as stach na fila",
+            "apply": "busca a primeira stash da fila",
+            "drop <nome>": "deleta uma stash",
+            "git stach pop": "busca a primeira stash da fila e retira ela da area de stach"
+        },
+        "status": {
+            "": "mostra a situação atual"
         }
-
     },
-    "rm" : {
-        "<arquivo>" : "remove o arquivo da staging area",
-        "-r" : "remove um diretorio"
-    } 
+    "rm": {
+        "<arquivo>": "remove o arquivo da staging area",
+        "-r": "remove um diretorio"
+    }
 }
